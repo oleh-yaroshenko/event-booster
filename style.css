@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    flex-shrink: 0;
+    font-weight: normal;
+    font-size: 100%;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    color: inherit;
+    font-family: inherit;
+    list-style: none;
+    vertical-align: baseline;
+    background: none;
+    outline: none;
+}
+
+body {
+    font-family: "Montserrat", sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+/* Нижче стилі для секції Modal */
+
+
+
+/* Нижче стилі для секції Header + Hero */
+
+
+
+/* Нижче стилі для секції Grid + Cards */
+
+
+
+/* Нижче стилі для секції Pagination + Footer */
+
