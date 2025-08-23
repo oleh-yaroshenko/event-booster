@@ -7,3 +7,5 @@
 
 
 // Нижче логіка секції Paginaton + Footer
+
+console.log("Hello World")
