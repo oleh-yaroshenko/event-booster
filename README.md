@@ -22,7 +22,7 @@
 
 ## API Key
 
-Наш ключ до бази даних (API), там є дуже багато даних про події які беруться з Ticketmaster: https://app.ticketmaster.com/discovery/v2/events.json?apikey=2w8E9usrwRr8erGBxyuy6R0lyvqfaeU4  
+Наш ключ до бази даних (API), там є дуже багато даних про події які беруться з Ticketmaster: `https://app.ticketmaster.com/discovery/v2/events.json?apikey=2w8E9usrwRr8erGBxyuy6R0lyvqfaeU4`  
 
 ## GitHub
 
