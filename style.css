@@ -35,6 +35,93 @@ body {
 
 
 /* Нижче стилі для секції Header + Hero */
+.header{
+    background: url('/event-booster/assets/header-bg.png') no-repeat center center/cover;
+    height: 500px;
+}
+
+.hero {
+  position: relative;
+  height: 100vh;
+  background: url('/event-booster/assets/header-bg.png');
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.content {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  text-align: center;
+}
+
+
+.logo {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+}
+
+.logo h1 {
+  margin: 0;
+  font-size: 28px;
+  line-height: 1.2;
+  font-weight: bold;
+}
+
+.logo .pink {
+  color: #e91e63;
+}
+
+.logo .white {
+  color: white;
+}
+
+
+.title {
+  font-size: 40px;
+  font-weight: bold;
+  color: #e91e63;
+  margin-bottom: 40px;
+}
+
+
+.search-bar {
+  display: flex;
+  gap: 10px;
+}
+
+.search-bar input,
+.search-bar select {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 25px;
+  outline: none;
+  font-size: 16px;
+}
+
+.search-bar button {
+  background-color: #e91e63;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.search-bar button:hover {
+  background-color: #c2185b;
+}
+
 
 
 
