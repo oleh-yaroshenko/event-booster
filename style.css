@@ -39,7 +39,16 @@ body {
 
 
 /* Нижче стилі для секції Grid + Cards */
+.grid{
+    background: rgb(26, 26, 26);
+}
 
+.grid-card{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
 
 
 /* Нижче стилі для секції Pagination + Footer */
