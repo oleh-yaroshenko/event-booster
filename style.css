@@ -40,7 +40,69 @@ body {
 
 /* Нижче стилі для секції Grid + Cards */
 
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    align-items: start;
+    column-gap: 70px;
+    row-gap: 62px;
+    background: #0d0d0d;
+    padding: 20px 174px;
+}
 
+.grid-card {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+}
+
+.grid-img {
+    height: 227px;
+    width: 100%;
+    border-radius: 50px 0;
+    object-fit: cover;
+}
+
+.grid-event-name {
+    font-weight: 700;
+    text-align: center;
+    color: #DC56C5;
+}
+
+.grid-event-date {
+    text-align: center;
+    color: #FFFFFF;
+}
+
+.grid-event-venue {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.grid-event-venue-p {
+    font-weight: 600;
+    font-size: 14px;
+    text-align: center;
+    flex-shrink: 1;
+    color: #FFFFFF;
+}
+
+.grid-card::after {
+    content: "";
+    right: -14px;
+    top: -14px;
+    position: absolute;
+    width: 153px;
+    height: 143px;
+    border: 1px solid #dc56c54d;
+    border-radius: 50px 0;
+}
 
 /* Нижче стилі для секції Pagination + Footer */
 
@@ -48,3 +110,10 @@ body {
 
 /* Нижче стилі для секції Responsive */
 
+@media (max-width: 1280px) {
+    /* Тут стилі для tablet (на макеті 768px) */
+}
+
+@media (max-width: 768px) {
+    /* Тут стилі для mobile (на макеті 320px) */
+}
