@@ -39,21 +39,83 @@ body {
 
 
 /* Нижче стилі для секції Grid + Cards */
-.grid{
+.grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     background: rgb(26, 26, 26);
 }
 
-.grid-card{
+.grid-card {
+    position: relative;
+    width: 25%;
+    padding: 40px;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
 }
 
+.grid-img {
+    height: 40vh;
+    width: 100%;
+    border-top-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+}
+
+.grid-event-name {
+    font-family: Montserrat;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 100%;
+    text-align: center;
+    color: #DC56C5;
+    margin-top: 3%;
+}
+
+.grid-event-date {
+    font-family: Montserrat;
+    font-weight: 400;
+    font-size: 16px;
+    text-align: center;
+    color: #FFFFFF;
+    margin-top: 3%;
+}
+
+.grid-event-venue {
+    margin-top: 3%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.grid-event-venue-p {
+    margin-left: 2%;
+    font-family: Montserrat;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    text-align: center;
+    flex-shrink: 1;
+    color: #FFFFFF;
+}
+
+.grid-card::after{
+    content: "";
+    right: 20px;
+    top: 20px;
+    position: absolute;
+    width: 50%;
+    height: 30vh;
+    border: 2px solid #DC56C54D;
+    border-top-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+}
 
 /* Нижче стилі для секції Pagination + Footer */
 
 
 
 /* Нижче стилі для секції Responsive */
-
