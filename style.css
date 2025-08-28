@@ -43,7 +43,51 @@ body {
 
 
 /* Нижче стилі для секції Pagination + Footer */
+.pagination {
+position: absolute;
+  background: url(/event-booster/assets/noise\ body.png);
+    gap: 30px;
+    margin-top: 20px;
+    background: #000000;
+  }
+  .footer{
+    background: #000000;
+  
+    /* position: relative; */
+  }
+  .page {
+   
+    cursor: pointer;
+    user-select: none;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    color: white;
+    
+  }
+  .active {
 
+  }
+  .page:hover{
+    transition: 2m;
+    width: 30px;
+    height: 30px;
+    border: 1.5px solid #DC56C5; 
+    color: #DC56C5;
+    border-radius: 10px 0 10px 0; /* верхний левый и нижний правый закруглены */
+    box-sizing: border-box;
+  }
+.footer-p{
+    cursor: pointer;
+    user-select: none;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    color: #939393;
+    font-size: 16px;
+    margin-top: 200px;
+    position: relative;
+}
 
 
 /* Нижче стилі для секції Responsive */
