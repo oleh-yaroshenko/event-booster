@@ -10,7 +10,7 @@
 Макар (makar2009on@gmail.com) - розробник, робить: Header + Hero  
 Даша (d.remen2009@gmail.com) - розробник, робить: Pagination + Footer  
 Назар (asagachka@gmail.com) - розробник, робить: поки нічого  
-Святослав (S.d.kubar@gmail.com) - розробник, робить: поки нічого
+Святослав (S.d.kubar@gmail.com) - розробник, робить: поки нічого  
 Мирослав (slav.kuki@gmail.com) - розробник, робить: Modal  
 
 ## Figma
