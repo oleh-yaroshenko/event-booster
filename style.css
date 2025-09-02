@@ -38,8 +38,11 @@ body {
 .header{
     background: url('/event-booster/assets/header-bg.png') no-repeat center center/cover;
     height: 500px;
+    
 }
 .header_logo_img{
+  position: relative;
+  top: 40px;
   margin-right: 1700px;
   margin-top: 150px;
   background: linear-gradient(
@@ -98,10 +101,10 @@ body {
 .header_title {
   font-size: 50px;
   font-family: "Montserrat-Black", sans-serif;
-  font-size: 50px;
+  font-size: 55px;
   font-weight: 900;
    color: #dc56c5;
-  margin-bottom: 300px;
+  margin-bottom: 370px;
 }
 
 
@@ -112,11 +115,15 @@ body {
   border-radius: 20px;
   height: 40px;
   position: relative;
-  bottom: 250px;
+  bottom: 350px;
   left: 160px;
   color: #939393;
   width: 270px;
   padding-left: 20px;
+}
+.header_select{
+  padding-right: 70px;
+  cursor: pointer;
 }
 
 .header_option{
@@ -139,11 +146,17 @@ background: rgba(255, 255, 255, 0.2);
 border-radius: 20px;
 position: relative;
 right: 180px;
-bottom: 210px;
+bottom: 310px;
 color: #939393;
 width: 270px;
 height: 40px;
 padding-top: 10px;
+}
+.header_search-bar_img{
+  position: absolute;
+  right: 34px;
+  height: 10px;
+  margin-top: 15px;
 }
 .header_search_img:hover{
   cursor: pointer;
