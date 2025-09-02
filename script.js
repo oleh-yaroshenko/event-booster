@@ -29,7 +29,7 @@ async function loadPage(page) {
 }
 
 function renderPagination() {
-  const pagination = document.getElementById("pagination");
+    const pagination = document.getElementById("pagination-inner");
   pagination.innerHTML = "";
 
   let pages = [];
