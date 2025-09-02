@@ -110,88 +110,58 @@ body {
 
 /* Нижче стилі для секції Responsive */
 
+
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    align-items: start;
+    column-gap: 70px;
+    row-gap: 62px;
+    background: #0d0d0d;
+    padding: 20px 174px;
+}
+
 @media (max-width: 1280px) {
     .grid {
         grid-template-columns: 1fr 1fr 1fr;
         column-gap: 32px;
-        row-gap: 32px;
-        padding: 24px 32px 0 32px;
+        row-gap: 40px;
+        padding: 20px 32px;
     }
     .grid-img {
-        height: 160px;
-        border-radius: 28px 0;
+        height: 364px;
+        width: 100%;
+        border-radius: 40px 0;
+        /* Прибрати min-width і max-width */
     }
     .grid-card {
-        gap: 8px;
-    }
-    .grid-card::after {
-        width: 80px;
-        height: 72px;
-        border-radius: 28px 0;
-        right: -6px;
-        top: -6px;
-    }
-    .main {
-        padding-bottom: 32px;
-    }
-    .footer {
-        padding: 20px 0 12px 0;
-        font-size: 12px;
+        width: 100%;
+        max-width: none;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
     }
 }
 
-/* 2 в ряд — планшети */
-@media (max-width: 900px) {
+@media (max-width: 768px) {
     .grid {
         grid-template-columns: 1fr 1fr;
-        column-gap: 20px;
+        column-gap: 16px;
         row-gap: 24px;
-        padding: 16px 8px 0 8px;
+        padding: 12px 8px;
     }
     .grid-img {
-        height: 120px;
-        border-radius: 18px 0;
-    }
-    .grid-card::after {
-        width: 50px;
-        height: 45px;
-        border-radius: 18px 0;
-        right: -4px;
-        top: -4px;
-    }
-}
-
-/* 1 в ряд — мобілки */
-@media (max-width: 600px) {
-    .grid {
-        grid-template-columns: 1fr;
-        column-gap: 0;
-        row-gap: 16px;
-        padding: 8px 4px 0 4px;
-    }
-    .grid-img {
-        height: 96px;
-        border-radius: 14px 0;
+        height: 220px;
+        width: 100%;
+        border-radius: 24px 0;
+        /* Прибрати min-width і max-width */
     }
     .grid-card {
-        gap: 4px;
-    }
-    .grid-card::after {
-        width: 36px;
-        height: 32px;
-        border-radius: 14px 0;
-        right: -2px;
-        top: -2px;
-    }
-    .footer {
-        padding: 10px 0 6px 0;
-        font-size: 9px;
-        text-align: center;
-    }
-    .header {
-        padding: 8px 0;
-    }
-    .modal {
-        padding: 4px;
+        width: 100%;
+        max-width: none;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
     }
 }
