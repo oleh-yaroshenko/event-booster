@@ -42,15 +42,8 @@ body {
 }
 .header_logo_img{
   position: relative;
-  top: 40px;
-  margin-right: 1700px;
-  margin-top: 150px;
-  background: linear-gradient(
-    136.07deg,
-    rgba(196, 196, 196, 0.03) 0%,
-    rgba(196, 196, 196, 0) 100%
-    
-  );
+  right: 530px;
+ 
 }
 .hero {
   position: relative;
@@ -104,7 +97,7 @@ body {
   font-size: 55px;
   font-weight: 900;
    color: #dc56c5;
-  margin-bottom: 370px;
+  margin-bottom: 120px;
 }
 
 
@@ -115,7 +108,7 @@ body {
   border-radius: 20px;
   height: 40px;
   position: relative;
-  bottom: 350px;
+  bottom: 100px;
   left: 160px;
   color: #939393;
   width: 270px;
@@ -146,7 +139,7 @@ background: rgba(255, 255, 255, 0.2);
 border-radius: 20px;
 position: relative;
 right: 180px;
-bottom: 310px;
+bottom: 60px;
 color: #939393;
 width: 270px;
 height: 40px;
