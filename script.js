@@ -4,17 +4,28 @@
 // Нижче логіка секції Paginaton + Footer
 
 const paginationLimit = 20;
-const paginationTotal = 29;
+let paginationTotal = 29;
 let pagiCurentPage = 1;
+let currentSearch = "";
 
-async function loadPage(page) {
-    const response = await fetch(`https://app.ticketmaster.com/discovery/v2/events.json?apikey=2w8E9usrwRr8erGBxyuy6R0lyvqfaeU4&page=${page - 1}&size=${paginationLimit}`);
+async function loadPage(page, keyword = "") {
+    const response = await fetch(
+        `https://app.ticketmaster.com/discovery/v2/events.json?apikey=2w8E9usrwRr8erGBxyuy6R0lyvqfaeU4&page=${page - 1}&size=${paginationLimit}&keyword=${encodeURIComponent(keyword)}`
+    );
     const data = await response.json();
 
     const grid = document.querySelector(".grid");
     grid.innerHTML = "";
 
     const events = data._embedded?.events || [];
+
+    if (events.length === 0) {
+        grid.innerHTML = `<p class="grid-no-events">No events found.</p>`;
+        paginationTotal = 1;
+        renderPagination();
+        return;
+    }
+
     events.forEach(event => {
         const gridVenue = event._embedded?.venues?.[0] || { name: "" };
         grid.innerHTML += `
@@ -30,6 +41,7 @@ async function loadPage(page) {
         `;
     });
 
+    paginationTotal = Math.min(data.page.totalPages || 1, 29);
     renderPagination();
 }
 
@@ -60,14 +72,19 @@ function renderPagination() {
         if (p !== "...") {
             btn.addEventListener("click", () => {
                 pagiCurentPage = p;
-                loadPage(pagiCurentPage);
+                loadPage(pagiCurentPage, currentSearch);
             });
         }
 
         pagination.appendChild(btn);
     });
 }
+const searchInput = document.querySelector(".header_input");
 
+searchInput.addEventListener("input", _.debounce((e) => {
+    currentSearch = e.target.value.trim();
+    pagiCurentPage = 1;
+    loadPage(pagiCurentPage, currentSearch);
+}, 1000, { leading: true, trailing: true }));
 
 loadPage(pagiCurentPage);
-
