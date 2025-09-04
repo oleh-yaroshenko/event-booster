@@ -39,7 +39,7 @@ body {
 .header {
     background: #0a0a0a80;
     position: relative;
-    padding: 0 0 192px;
+    padding: 0 0 146px;
 }
 
 .header::after {
@@ -51,6 +51,16 @@ body {
     bottom: 0;
     background: url(assets/header-bg.png) no-repeat center center/cover;
     z-index: -1;
+}
+
+.header::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    height: 82px;
+    background: linear-gradient(180deg, transparent, rgb(0, 0, 0));
 }
 
 .header_content {
