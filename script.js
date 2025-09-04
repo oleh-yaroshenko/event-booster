@@ -8,8 +8,8 @@
 
 // Нижче логіка секції Paginaton + Footer
 
-const paginationLimit = 20; 
-const paginationTotal = 29; 
+const paginationLimit = 20;
+const paginationTotal = 29;
 let pagiCurentPage = 1;
 
 async function loadPage(page) {
@@ -17,7 +17,7 @@ async function loadPage(page) {
     const data = await response.json();
 
     const grid = document.querySelector(".grid");
-    grid.innerHTML = ""; 
+    grid.innerHTML = "";
 
     const events = data._embedded?.events || [];
     events.forEach(event => {
@@ -56,7 +56,7 @@ function renderPagination() {
     }
 
     pages.forEach(p => {
-        const btn = document.createElement("span");
+        const btn = document.createElement("div");
         btn.classList.add("page");
         btn.textContent = p;
 

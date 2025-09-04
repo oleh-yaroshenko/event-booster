@@ -40,69 +40,14 @@ body {
 
 /* Нижче стилі для секції Grid + Cards */
 
-
-
-/* Нижче стилі для секції Pagination + Footer */
-.footer {
-    background: #000000;        
-    padding: 20px 0;
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 100px;                  
-  }
-  
-  .pagination {
-    display: flex;
-    justify-content: center;
-
-    color: white;
-    margin-top: 100px; 
-  }
-  
-  .page {
-    color: rgb(255, 255, 255);
-    cursor: pointer;
-    user-select: none;
-    font-family: "Montserrat", sans-serif;
-    margin: 20px;
-
-  }
-  
-  .page:hover {
-    transition: 0.2s;
-    width: 40px;
-    height: 40px;
-    border: 1px solid #DC56C5;
-    padding: 8px;
-
-    color: #DC56C5;
-    border-radius: 10px 0 10px 0;
-    box-sizing: border-box;
-  }
-  
-  .footer-p {
-    font-family: "Montserrat", sans-serif;
-    color: #939393;
-    font-size: 16px;
-    margin: 0;
-    text-align: center;
-  }
-  
-
-
-
-
-
-  .grid {
+.grid {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     align-items: start;
     column-gap: 70px;
     row-gap: 62px;
     background: #000000;
-    padding: 20px 174px;
+    padding: 20px 174px 80px;
 }
 
 .grid-card {
@@ -159,5 +104,54 @@ body {
     border-radius: 50px 0;
 }
 
-/* Нижче стилі для секції Responsive */
+/* Нижче стилі для секції Pagination + Footer */
 
+.pagination {
+    display: flex;
+    justify-content: center;
+    color: white;
+}
+
+#pagination-inner {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.page {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    user-select: none;
+    width: 28px;
+    height: 28px;
+    border-radius: 10px 0;
+    border: 1px solid #000000;
+    transition: .2s;
+}
+
+.page.active {
+    color: #DC56C5;
+}
+
+.page:hover {
+    border: 1px solid #DC56C5;
+    color: #DC56C5;
+}
+
+.footer {
+    background: #000000;
+    padding: 0 0 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 80px;
+}
+
+.footer-p {
+    color: #939393;
+    text-align: center;
+}
+
+/* Нижче стилі для секції Responsive */
