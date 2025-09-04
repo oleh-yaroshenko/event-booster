@@ -147,10 +147,159 @@ body {
 
 /* Нижче стилі для секції Grid + Cards */
 
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    align-items: start;
+    column-gap: 70px;
+    row-gap: 62px;
+    background: #000000;
+    padding: 20px 174px 80px;
+}
 
+.grid-card {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+}
+
+.grid-img {
+    height: 227px;
+    width: 100%;
+    border-radius: 50px 0;
+    object-fit: cover;
+}
+
+.grid-event-name {
+    font-weight: 700;
+    text-align: center;
+    color: #DC56C5;
+}
+
+.grid-event-date {
+    text-align: center;
+    color: #FFFFFF;
+}
+
+.grid-event-venue {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.grid-event-venue-p {
+    font-weight: 600;
+    font-size: 14px;
+    text-align: center;
+    flex-shrink: 1;
+    color: #FFFFFF;
+}
+
+.grid-card::after {
+    content: "";
+    right: -14px;
+    top: -14px;
+    position: absolute;
+    width: 153px;
+    height: 143px;
+    border: 1px solid #dc56c54d;
+    border-radius: 50px 0;
+}
 
 /* Нижче стилі для секції Pagination + Footer */
 
+.pagination {
+    display: flex;
+    justify-content: center;
+    color: white;
+}
 
+#pagination-inner {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.page {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    user-select: none;
+    width: 28px;
+    height: 28px;
+    border-radius: 10px 0;
+    border: 1px solid #000000;
+    transition: .2s;
+}
+
+.page.active {
+    color: #DC56C5;
+}
+
+.page:hover {
+    border: 1px solid #DC56C5;
+    color: #DC56C5;
+}
+
+.footer {
+    background: #000000;
+    padding: 0 0 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 80px;
+}
+
+.footer-p {
+    color: #939393;
+    text-align: center;
+}
 
 /* Нижче стилі для секції Responsive */
+
+@media (max-width: 1279px) {
+    .grid {
+        grid-template-columns: 1fr 1fr 1fr;
+        column-gap: 26px;
+        row-gap: 58px;
+        padding: 20px 88px;
+    }
+}
+
+@media (max-width: 767px) {
+    .grid {
+        grid-template-columns: 1fr 1fr;
+        column-gap: 14px;
+        row-gap: 40px;
+        padding: 20px 26px;
+    }
+
+    .grid-img {
+        height: 161px;
+    }
+
+    .grid-event-name {
+        font-size: 14px;
+    }
+
+    .grid-event-date {
+        font-size: 14px;
+    }
+
+    .grid-event-venue-p {
+        font-size: 12px;
+    }
+
+    .grid-card::after {
+        right: -10px;
+        top: -10px;
+        width: 108px;
+        height: 101px;
+    }
+}
