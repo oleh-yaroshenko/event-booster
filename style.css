@@ -36,7 +36,114 @@ body {
 
 /* Нижче стилі для секції Header + Hero */
 
+.header {
+    background: #0a0a0a80;
+    position: relative;
+    padding: 0 0 192px;
+}
 
+.header::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background: url(assets/header-bg.png) no-repeat center center/cover;
+    z-index: -1;
+}
+
+.header_content {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    text-align: center;
+}
+
+.header_logo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 240px;
+    height: 200px;
+    backdrop-filter: blur(30px);
+    border-bottom-right-radius: 400px;
+}
+
+.header_logo_img {
+    position: absolute;
+    top: 40px;
+    left: 40px;
+}
+
+.header_title {
+    font-size: 50px;
+    font-weight: 900;
+    color: #dc56c5;
+    padding: 40px 0 52px;
+    text-transform: uppercase;
+}
+
+.header-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.header_search {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 40px;
+    width: 270px;
+    backdrop-filter: blur(20px);
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 20px;
+    cursor: pointer;
+    padding: 10px 30px;
+}
+
+.header_input {
+    color: #ffffff;
+    flex-grow: 1;
+}
+
+.header_input::placeholder {
+    color: #939393;
+}
+
+.header_search_img {
+    width: 12px;
+    height: 12px;
+}
+
+.header_search-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 40px;
+    width: 270px;
+    backdrop-filter: blur(20px);
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 20px;
+    cursor: pointer;
+    padding: 10px 30px;
+}
+
+.header_select {
+    appearance: none;
+    color: #939393;
+    flex-grow: 1;
+}
+
+.header_search-bar_img {
+    width: 15px;
+    height: 10px;
+}
 
 /* Нижче стилі для секції Grid + Cards */
 
