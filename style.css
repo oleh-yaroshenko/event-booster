@@ -46,8 +46,8 @@ body {
     align-items: start;
     column-gap: 70px;
     row-gap: 62px;
-    background: #0d0d0d;
-    padding: 20px 174px;
+    background: #000000;
+    padding: 20px 174px 80px;
 }
 
 .grid-card {
@@ -106,7 +106,53 @@ body {
 
 /* Нижче стилі для секції Pagination + Footer */
 
+.pagination {
+    display: flex;
+    justify-content: center;
+    color: white;
+}
 
+#pagination-inner {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.page {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    user-select: none;
+    width: 28px;
+    height: 28px;
+    border-radius: 10px 0;
+    border: 1px solid #000000;
+    transition: .2s;
+}
+
+.page.active {
+    color: #DC56C5;
+}
+
+.page:hover {
+    border: 1px solid #DC56C5;
+    color: #DC56C5;
+}
+
+.footer {
+    background: #000000;
+    padding: 0 0 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 80px;
+}
+
+.footer-p {
+    color: #939393;
+    text-align: center;
+}
 
 /* Нижче стилі для секції Responsive */
 
