@@ -155,3 +155,44 @@ body {
 }
 
 /* Нижче стилі для секції Responsive */
+
+@media (max-width: 1279px) {
+    .grid {
+        grid-template-columns: 1fr 1fr 1fr;
+        column-gap: 26px;
+        row-gap: 58px;
+        padding: 20px 88px;
+    }
+}
+
+@media (max-width: 767px) {
+    .grid {
+        grid-template-columns: 1fr 1fr;
+        column-gap: 14px;
+        row-gap: 40px;
+        padding: 20px 26px;
+    }
+
+    .grid-img {
+        height: 161px;
+    }
+
+    .grid-event-name {
+        font-size: 14px;
+    }
+
+    .grid-event-date {
+        font-size: 14px;
+    }
+
+    .grid-event-venue-p {
+        font-size: 12px;
+    }
+
+    .grid-card::after {
+        right: -10px;
+        top: -10px;
+        width: 108px;
+        height: 101px;
+    }
+}
