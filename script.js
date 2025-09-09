@@ -1,5 +1,32 @@
 // Нижче логіка секції Modal
 
+const modal = document.getElementById('modal');
+const closeModalBtn = document.getElementById('closeModal');
+
+function openModal(event) {
+    document.getElementById('modal-header').src = event.images[0].url;
+    document.getElementById('modal-poster').src = event.images[0].url;
+    document.getElementById('modal-info').textContent = event.info || 'No description available.';
+    document.getElementById('modal-when').innerHTML = `${event.dates.start.localDate}<br>${event.dates.start.localTime || ''} (${event.dates.timezone || ''})`;
+    const venue = event._embedded?.venues?.[0] || {};
+    document.getElementById('modal-where').innerHTML = `${venue.city?.name || ''}, ${venue.country?.name || ''}<br>${venue.name || ''}`;
+    document.getElementById('modal-who').textContent = event._embedded?.attractions?.[0]?.name || 'Unknown';
+
+    document.getElementById('modal-price-standard').textContent = event.priceRanges ? `${event.priceRanges[0].min}-${event.priceRanges[0].max} ${event.priceRanges[0].currency}` : 'Price not available';
+    document.getElementById('modal-price-vip').textContent = event.priceRanges && event.priceRanges.length > 1 ? `${event.priceRanges[1].min}-${event.priceRanges[1].max} ${event.priceRanges[1].currency}` : 'VIP not available';
+
+    modal.style.display = 'block';
+}
+
+closeModalBtn.addEventListener('click', () => {
+    modal.style.display = 'none';
+});
+
+window.addEventListener('click', (event) => {
+    if (event.target === modal) {
+        modal.style.display = 'none';
+    }
+});
 
 // Нижче логіка секції Paginaton + Footer
 
@@ -28,17 +55,19 @@ async function loadPage(page, keyword = "") {
 
     events.forEach(event => {
         const gridVenue = event._embedded?.venues?.[0] || { name: "" };
-        grid.innerHTML += `
-            <div class="grid-card">
-                <img class="grid-img" src="${event.images[0].url}" alt="${event.name}">
-                <h3 class="grid-event-name">${event.name}</h3>
-                <p class="grid-event-date">${event.dates.start.localDate}</p>
-                <div class="grid-event-venue">
-                    <img class="grid-event-venue-img" src="/event-booster/assets/cards-location.png" alt="location">
-                    <p class="grid-event-venue-p">${gridVenue.name}</p>
-                </div>
+        const eventCard = document.createElement('div');
+        eventCard.className = 'grid-card';
+        eventCard.innerHTML = `
+            <img class="grid-img" src="${event.images[0].url}" alt="${event.name}">
+            <h3 class="grid-event-name">${event.name}</h3>
+            <p class="grid-event-date">${event.dates.start.localDate}</p>
+            <div class="grid-event-venue">
+                <img class="grid-event-venue-img" src="./assets/cards-location.png" alt="location">
+                <p class="grid-event-venue-p">${gridVenue.name}</p>
             </div>
         `;
+        eventCard.addEventListener('click', () => openModal(event));
+        grid.appendChild(eventCard);
     });
 
     paginationTotal = Math.min(data.page.totalPages || 1, 29);
